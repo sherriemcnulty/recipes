@@ -2,7 +2,7 @@
 
 ## Links
 
-- [Functional Requirements](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Requirements.pdf)
+- [Functional Requirements](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Requirements.PDF)
 - [Wireframes](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Wireframes.pdf)
 
 ## Introcuction
