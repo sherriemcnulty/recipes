@@ -1,9 +1,16 @@
 # Recipes, Version 1.0
 
-## Links
+## Specifications
 
 - [Functional Requirements](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Requirements.PDF)
-- [Wireframes](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Wireframes.pdf)
+
+## Wireframes
+
+- [Index Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_index.pdf)
+- [Add Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_insert.pdf)
+- [Edit Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_edit.pdf)
+- [View All Recipes Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_view-all.pdf)
+- [View One Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_view-one.pdf)
 
 ## Introcuction
 
