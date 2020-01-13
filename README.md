@@ -2,8 +2,8 @@
 
 ## Links
 
-- [Functional Requirements](./public/assets/documents/requirements)
-- [Wireframes](./public/assets/documents/wireframes)
+- [Functional Requirements](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Requirements.pdf)
+- [Wireframes](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Wireframes.pdf)
 
 ## Introcuction
 
