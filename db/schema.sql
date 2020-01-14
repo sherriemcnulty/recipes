@@ -9,7 +9,6 @@ CREATE TABLE recipes
 	title VARCHAR
     (100) NOT NULL,
 	prep_time INT NOT NULL,
-    cook_time INT NOT NULL,
     servings INT NOT NULL,
 	ingredients VARCHAR
     (255) NOT NULL,

@@ -1,5 +1,5 @@
 {
-  "name": "recipes-documentation",
+  "name": "recipes",
   "version": "1.0.0",
   "description": "- [Functional Requirements](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/Requirements.PDF)",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sherriemcnulty/recipes-documentation.git"
+    "url": "git+https://github.com/sherriemcnulty/recipes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sherriemcnulty/recipes-documentation/issues"
+    "url": "https://github.com/sherriemcnulty/recipes/issues"
   },
-  "homepage": "https://github.com/sherriemcnulty/recipes-documentation#readme",
+  "homepage": "https://github.com/sherriemcnulty/recipes#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
