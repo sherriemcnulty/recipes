@@ -6,9 +6,9 @@
 
 ## Wireframes
 
-- [Index Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_index.pdf)
-- [Add Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_insert.pdf)
-- [Edit Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_edit.pdf)
+- [Home Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_index.pdf)
+- [New Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_create.pdf)
+- [Edit Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_update.pdf)
 - [View All Recipes Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_view-all.pdf)
 - [View One Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_view-one.pdf)
 
@@ -21,12 +21,14 @@ This software allows users to store recipes in a database
 - Search the database
 - Edit recipes
 - Delete recipes
+- Search recipes
 
 ## Out of Scope
 
 - User accounts
 - Login authentication
 - Recipe ownership
+- Search functionality
 
 ## Future Development
 
@@ -34,8 +36,7 @@ This software allows users to store recipes in a database
 
 - User accounts
 - Login authentication
-- Recipe ownership that prevents anyone, other than the owner, from modifying
-  or deleting recipes
+- Recipe ownership (Limit recipe edit and delete to the owner)
 
 ### Version 3.0
 
