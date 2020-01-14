@@ -6,12 +6,12 @@
 
 ## Wireframes
 
-- [Home Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_index.pdf)
-- [New Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_create.pdf)
-- [Edit Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_update.pdf)
-- [View All Recipes Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_view-all.pdf)
-- [View One Recipe Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_view-one.pdf)
-- [Error Page](https://sherriemcnulty.github.io/recipes-documentation/public/assets/documents/wireframe_error.pdf)
+- [Home Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_index.pdf)
+- [New Recipe Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_create.pdf)
+- [Edit Recipe Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_update.pdf)
+- [View All Recipes Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
+- [View One Recipe Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
+- [Error Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_error.pdf)
 
 ## Introduction
 
