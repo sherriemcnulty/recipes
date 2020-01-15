@@ -1,5 +1,7 @@
 # Recipes, Version 1.0
 
+[Live Demo](https://recipes-srm.herokuapp.com/)
+
 ## Specifications
 
 - [Functional Requirements](https://sherriemcnulty.github.io/recipes/public/assets/documents/Requirements.PDF)
