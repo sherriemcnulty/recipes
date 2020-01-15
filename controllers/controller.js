@@ -106,7 +106,6 @@ router.get("/api/json", function(req, res) {
 
 // Page not found
 router.get("*", function(req, res) {
-	console.log("oops!");
 	return res.status(404).end();
 });
 

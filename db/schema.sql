@@ -1,6 +1,6 @@
-CREATE DATABASE recipes_db;
-USE recipesDB;
-
+USE j1v864fyr1mqktix;
+DROP TABLE recipes;
+DROP TABLE clients;
 CREATE TABLE recipes
 (
     id INT NOT NULL
@@ -16,18 +16,3 @@ CREATE TABLE recipes
     PRIMARY KEY
     (id)
 );
-
-    -- The client table will be used when login authentication is implemented
-    CREATE TABLE clients
-    (
-        id int NOT NULL
-        AUTO_INCREMENT,
-	client VARCHAR
-        (50) NOT NULL,
-    pwd  CHAR
-        (60),
-	PRIMARY KEY
-        (id)
-);
-
-

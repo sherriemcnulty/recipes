@@ -1,4 +1,4 @@
-USE recipes_db;
+USE j1v864fyr1mqktix;
 
 INSERT INTO recipes
     (title, prep_time, servings, ingredients, directions)
