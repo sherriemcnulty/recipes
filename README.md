@@ -2,18 +2,15 @@
 
 [Live Demo](https://recipes-srm.herokuapp.com/)
 
-## Specifications
+## Requirements
 
 - [Functional Requirements](https://sherriemcnulty.github.io/recipes/public/assets/documents/Requirements.PDF)
-
-## Wireframes
-
-- [Home Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_index.pdf)
-- [New Recipe Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_create.pdf)
-- [Edit Recipe Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_update.pdf)
-- [View All Recipes Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
-- [View One Recipe Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
-- [Error Page](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_error.pdf)
+- [Home Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_index.pdf)
+- [New Recipe Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_create.pdf)
+- [Edit Recipe Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_update.pdf)
+- [View All Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
+- [View One Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
+- [Error Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_error.pdf)
 
 ## Introduction
 
