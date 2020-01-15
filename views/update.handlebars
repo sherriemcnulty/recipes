@@ -1,0 +1,40 @@
+{{> navbar-standard }}
+
+<div class="container">
+   <div class="jumbotron bg-papyrus border border-warning rounded-0">
+      <h2>Edit Recipe</h2>
+      <hr>
+      <form data-id="{{recipes.id}}" id="update-form" class="update-form">
+         <div class="form-group">
+            <label class="font-weight-bold my-2" for="title">Title:</label>
+            <input type="text" class="form-control rounded-0" value="{{recipes.title}}" id="title" name="title">
+         </div>
+         <div class="form-group">
+            <label class="font-weight-bold my-2" for="ingredients">Ingredients:</label>
+            <textarea class="form-control rounded-0" value="{{recipes.ingredients}}" id="ingredients" name="ingredients"
+               rows="8" cols="40">{{recipes.ingredients}}</textarea>
+         </div>
+         <div class="form-group">
+            <label class="font-weight-bold my-2" for="directions">Directions:</label>
+            <textarea class="form-control rounded-0" value="{{recipes.directions}}" id="directions" name="directions"
+               rows="8" cols="40">{{recipes.directions}}</textarea>
+         </div>
+
+         <div class="form-group">
+            <label class="font-weight-bold my-2" for="prep_time">Prep Time: (minutes)</label>
+            <input type="number" class="form-control w-25 rounded-0" value="{{recipes.prep_time}}" id="prep_time"
+               name="prep_time" min="1">
+         </div>
+
+         <div class="form-group">
+            <label class="font-weight-bold" for="servings">Servings:</label>
+            <input type="number" class="form-control w-25 rounded-0" value="{{recipes.servings}}" id="servings"
+               name="servings" min="1">
+         </div>
+
+         <button type="submit" class="btn btn-warning mt-3 rounded-0" id="update-recipe">Submit</button>
+      </form>
+   </div>
+</div>
+
+<script src="/assets/js/app.js"> </script>

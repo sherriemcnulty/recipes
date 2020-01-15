@@ -1,8 +1,3 @@
-// Controller:
-// - Verify route
-// - If not valid -> render 404 page and return error code to the client
-// - Else -> Send the request to the model and return the result to the client
-
 const express = require("express");
 const model = require("../models/model.js");
 let router = express.Router();
@@ -24,16 +19,6 @@ router.get("/api", function(req, res) {
 			recipes: data
 		};
 		res.render("view-all", hbsObject);
-	});
-});
-
-// Send all recipes to the client as JSON
-router.get("/api/json", function(req, res) {
-	model.all(function(data) {
-		let hbsObject = {
-			recipes: data
-		};
-		res.json(hbsObject);
 	});
 });
 
@@ -61,17 +46,16 @@ router.get("/api/recipes/:id", function(req, res) {
 	});
 });
 
-// POST a new recipe & return result as JSON
+// Insert a new recipe & return the id
 router.post("/api/recipes", function(req, res) {
 	model.create(
-		["category, dish, prep_time, ingredients, directions, recipe_yield"],
+		["title, prep_time, ingredients, directions, servings"],
 		[
-			req.body.category,
-			req.body.dish,
+			req.body.title,
 			req.body.prep_time,
 			req.body.ingredients,
 			req.body.directions,
-			req.body.recipe_yield
+			req.body.servings
 		],
 		function(result) {
 			// Send back the ID of the new recipe
@@ -82,23 +66,48 @@ router.post("/api/recipes", function(req, res) {
 	);
 });
 
-// DELETE a recipe
+// Delete a recipe
 router.delete("/api/recipes/:id", function(req, res) {
 	var condition = "id = " + req.params.id;
 
 	model.delete(condition, function(result) {
 		if (result.affectedRows == 0) {
-			// If no rows were changed, then the ID must not exist, so 404
-			return res.status(404).end();
+			// If no rows changed -> id must not exist
+			return res.status(400).end();
 		} else {
 			res.status(200).end();
 		}
 	});
 });
 
+// Update a recipe
+router.put("/api/recipes/:id", function(req, res) {
+	let condition = "id = " + req.params.id;
+
+	model.update(req.body, condition, function(result) {
+		if (result.changedRows == 0) {
+			// If no rows changed -> id must not exist
+			return res.status(400).end();
+		} else {
+			res.status(200).end();
+		}
+	});
+});
+
+// Send all recipes to the client as JSON
+router.get("/api/json", function(req, res) {
+	model.all(function(data) {
+		let hbsObject = {
+			recipes: data
+		};
+		res.json(hbsObject);
+	});
+});
+
 // Page not found
 router.get("*", function(req, res) {
-	res.render(page - not - found);
+	console.log("oops!");
+	return res.status(404).end();
 });
 
 // Export routes for server.js to use.

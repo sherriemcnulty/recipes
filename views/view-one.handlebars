@@ -1,0 +1,25 @@
+{{> navbar-standard }}
+
+<div class="container">
+    <div class="bg-papyrus border border-warning p-4">
+        {{#each recipes}}
+        <h2>{{this.title}}</h2>
+        <hr>
+        <div>
+            {{!-- Recipe --}}
+            <p><span class="label font-weight-bold">Prep Time:</span> {{this.prep_time}}</p>
+            <p><span class="label font-weight-bold">Servings:</span> {{this.servings}}</p>
+            <p><span class="label font-weight-bold">Ingredients:</span> {{this.ingredients}}</p>
+            {{!-- Action Buttons --}}
+            <p><span class="label font-weight-bold">Directions:</span> {{this.directions}}</p>
+            <button class="btn btn-warning btn-custom-size rounded-0"
+                onclick="location.href='/api/recipes/{{this.id}}'">Edit</button>
+            <button data-id="{{this.id}}" class="delrecipe btn btn-warning btn-custom-size rounded-0">Delete</button>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{> modal-center }}
+
+<script src="/assets/js/app.js"> </script>
