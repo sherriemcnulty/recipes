@@ -1,16 +1,8 @@
 const express = require("express");
 const model = require("../models/model");
+require("../lib/handleError");
+
 const router = express.Router();
-
-// handleError(): This is a helper function
-
-function handleError(res, errCode) {
-	switch (errCode) {
-		case 404:
-			res.render("error404");
-			break;
-	}
-}
 
 // Render index.handlebars
 router.get("/", function(req, res) {
@@ -118,7 +110,7 @@ router.get("/api/json", function(req, res) {
 
 // Page not found
 router.get("*", function(req, res) {
-	res.render("error404");
+	handleError(req, res, 404);
 });
 
 module.exports = router;
