@@ -1,6 +1,7 @@
 # Recipes, Version 1.0
 
-[Live Demo](https://recipes-srm.herokuapp.com/)
+- [Live Demo](https://recipes-srm.herokuapp.com/)
+- [Code](https://github.com/sherriemcnulty/recipes)
 
 ## Requirements
 

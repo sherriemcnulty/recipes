@@ -1,13 +1,12 @@
-// Dependencies
 require("dotenv").config();
 const MYSQL = require("mysql");
+let Connection;
 
-// Connect to Heroku if available, else connect to the local database.
-let connection;
+// connect to the database
 if (process.env.JAWSDB_URL) {
-	connection = MYSQL.createConnection(process.env.JAWSDB_URL);
+	Connection = MYSQL.createConnection(process.env.JAWSDB_URL);
 } else {
-	connection = MYSQL.createConnection({
+	Connection = MYSQL.createConnection({
 		host: "localhost",
 		port: 3306,
 		user: "root",
@@ -16,13 +15,9 @@ if (process.env.JAWSDB_URL) {
 	});
 }
 
-connection.connect(function(err) {
-	if (err) {
-		console.error("Error connecting: " + err.stack);
-		return;
-	}
-	console.log("Connected as id " + connection.threadID);
+Connection.connect(function(err) {
+	if (err) throw err;
+	console.log("Connected to the database!");
 });
 
-// Export connection for ORM to use
-module.exports = connection;
+module.exports = Connection;

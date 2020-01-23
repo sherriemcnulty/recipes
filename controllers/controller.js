@@ -1,6 +1,16 @@
 const express = require("express");
-const model = require("../models/model.js");
-let router = express.Router();
+const model = require("../models/model");
+const router = express.Router();
+
+// handleError(): This is a helper function
+
+function handleError(res, errCode) {
+	switch (errCode) {
+		case 404:
+			res.render("error404");
+			break;
+	}
+}
 
 // Render index.handlebars
 router.get("/", function(req, res) {
@@ -25,6 +35,7 @@ router.get("/api", function(req, res) {
 // Render populated view-one.handlebars
 router.get("/api/:id", function(req, res) {
 	let condition = "id = " + req.params.id;
+	let id = req.params.id;
 
 	model.getWhere(condition, function(data) {
 		let hbsObject = {
@@ -87,7 +98,8 @@ router.put("/api/recipes/:id", function(req, res) {
 	model.update(req.body, condition, function(result) {
 		if (result.changedRows == 0) {
 			// If no rows changed -> id must not exist
-			return res.status(400).end();
+			// return res.status(400).end();
+			res.render("");
 		} else {
 			res.status(200).end();
 		}
@@ -106,8 +118,7 @@ router.get("/api/json", function(req, res) {
 
 // Page not found
 router.get("*", function(req, res) {
-	return res.status(404).end();
+	res.render("error404");
 });
 
-// Export routes for server.js to use.
 module.exports = router;

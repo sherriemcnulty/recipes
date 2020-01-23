@@ -1,12 +1,6 @@
-// orm.js:
-// Recieves request objects from model.js functions
-// Converts them into SQL query strings
-// Sends the query to the database
-// Sends the results back to the calling function
-
 const connection = require("../config/connection.js");
 
-// Helper function that creates an array of question marks and converts them to a string
+// printQuestionMarks(): Helper function that creates an array of question marks and converts them to a string
 function printQuestionMarks(num) {
 	let arr = [];
 
@@ -16,33 +10,30 @@ function printQuestionMarks(num) {
 	return arr.toString();
 }
 
-// Helper function that converts key/value pairs to SQL syntax
-function objToSql(ob) {
+// objToSql(): Helper function that converts input key/value pairs (obj) into MySQL query string
+function objToSql(obj) {
 	let arr = [];
 
-	// loop through the keys and push the key/value as a string int arr
-	for (let key in ob) {
-		let value = ob[key];
+	for (let key in obj) {
+		let value = obj[key];
 
-		// check to skip hidden properties
-		if (Object.hasOwnProperty.call(ob, key)) {
-			// Escape single quotes within strings
+		// if obj[key] has a value assigned to it -> put single quotes around the values
+		// (you must escape all single quotes within each value before enclosing it with surrounding quotes)
+		if (Object.hasOwnProperty.call(obj, key)) {
 			value = value.replace("'", "\\'");
-
-			// Put quotes around the string, ie.(Lana Del Grey => 'Lana Del Grey')
 			value = "'" + value + "'";
-
-			// push key/value onto the array
 			arr.push(key + "=" + value);
 		}
 	}
-	// translate array of strings to a single comma-separated string
 	return arr.toString();
 }
 
-// The "orm" hConvert user request into database queries, pass them to the database. Use the "cb" parameter to return the result to the calling function.
-let orm = {
-	// Get all recipes
+// Orm (Object Relational Mapping) functions:
+// (1) map input request object to a MySQL query string
+// (2) send query string to the database via connection (connection.js)
+// (3) return result
+let Orm = {
+	// get all recipes
 	all: function(tableInput, cb) {
 		let queryString = `SELECT * FROM ${tableInput};`;
 
@@ -54,7 +45,7 @@ let orm = {
 		});
 	},
 
-	// Get a single recipe
+	// get one recipe
 	getWhere: function(tableInput, condition, cb) {
 		let queryString = `SELECT * FROM ${tableInput} WHERE ${condition};`;
 
@@ -66,7 +57,7 @@ let orm = {
 		});
 	},
 
-	// Insert a recipe into the database
+	// insert a recipe
 	create: function(table, cols, vals, cb) {
 		let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(
 			vals.length
@@ -80,7 +71,7 @@ let orm = {
 		});
 	},
 
-	// Update a recipe
+	// update a recipe
 	update: function(table, objColVals, condition, cb) {
 		let queryString = `UPDATE ${table} SET ${objToSql(
 			objColVals
@@ -94,7 +85,7 @@ let orm = {
 		});
 	},
 
-	// Delete a recipe
+	// delete a recipe
 	delete: function(table, condition, cb) {
 		let queryString = `DELETE FROM ${table} WHERE ${condition}`;
 
@@ -105,7 +96,6 @@ let orm = {
 			cb(result);
 		});
 	}
-}; // orm
+};
 
-// Export the orm object for the model.
-module.exports = orm;
+module.exports = Orm;
