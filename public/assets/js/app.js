@@ -1,10 +1,10 @@
 $(function() {
-	// Delete
+	// Delete a recipe
 	$(".delrecipe").on("click", function(event) {
 		// prevent submit action from triggering prematurely
 		event.preventDefault();
 
-		let id = $(this).data("id");
+		const id = $(this).data("id");
 
 		$.ajax("/api/recipes/" + id, {
 			type: "DELETE"
@@ -14,12 +14,12 @@ $(function() {
 		});
 	});
 
-	// Insert
+	// Add a new recipe
 	$("#add-recipe").on("click", function(event) {
 		// prevent submit action from triggering prematurely
 		event.preventDefault();
 
-		let newRecipe = {
+		const newRecipe = {
 			title: $("#title")
 				.val()
 				.trim(),
@@ -46,12 +46,13 @@ $(function() {
 		});
 	});
 
+	// Update a recipe
 	$("#update-recipe").on("click", function(event) {
 		event.preventDefault();
 
-		let id = $("#update-form").attr("data-id");
+		const id = $("#update-form").attr("data-id");
 
-		let updatedRecipe = {
+		const updatedRecipe = {
 			title: $("#title")
 				.val()
 				.trim(),
@@ -73,7 +74,7 @@ $(function() {
 			type: "PUT",
 			data: updatedRecipe
 		}).then(function() {
-			// Show recipe for user confirmation
+			// Display the recipe for user confirmation
 			$("body").load(`/api/${id}`);
 		});
 	});

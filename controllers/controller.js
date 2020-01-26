@@ -1,6 +1,6 @@
 const express = require("express");
 const model = require("../models/model");
-require("../lib/handleError");
+const handleError = require("../lib/handleError");
 
 const router = express.Router();
 
@@ -90,8 +90,7 @@ router.put("/api/recipes/:id", function(req, res) {
 	model.update(req.body, condition, function(result) {
 		if (result.changedRows == 0) {
 			// If no rows changed -> id must not exist
-			// return res.status(400).end();
-			res.render("");
+			res.render("error400");
 		} else {
 			res.status(200).end();
 		}
