@@ -43,3 +43,15 @@ Add the following:
 - User accounts
 - Login authentication
 - Recipe ownership (Limit recipe edit and delete to the owner)
+
+## Author(s)
+
+- [Sherrie McNulty](https://github.com/sherriemcnulty)
+  - Version 1.0: Design, MVC, ORM, Database, Deployment
+  - Version 2.0: Re-design, Implementation, Deployment
+- [Julian May](https://github.com/julianmay9)
+  - Version 1.0, UI,/UX, Client-side API Integration, 3rd Party API, Deployment
+- [Ashley Sweatt](https://github.com/aswea002)
+  - Version 1.0: UI/UX, Database, Presentation Slideshow
+- [Lenny Roper](https://github.com/LennyRoper)
+  - Version 1.0: Investigate Symantic, Oral Demo
