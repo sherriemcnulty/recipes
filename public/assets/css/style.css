@@ -18,6 +18,12 @@ body {
 	width: 5em;
 }
 
+.recipe {
+	font-size: larger;
+	/* font-family: "Shadows Into Light", cursive; */
+	font-family: "Satisfy", cursive;
+}
+
 .w-small-number {
 	width: 5em;
 }
