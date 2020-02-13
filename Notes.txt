@@ -1,0 +1,1 @@
+Make new recipe submit go to view 1 page
