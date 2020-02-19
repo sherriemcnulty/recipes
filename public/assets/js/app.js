@@ -1,20 +1,5 @@
-$(function() {
-	// Delete a recipe
-	$(".delrecipe").on("click", function(event) {
-		// prevent submit action from triggering prematurely
-		event.preventDefault();
-
-		const id = $(this).data("id");
-
-		$.ajax("/api/recipes/" + id, {
-			type: "DELETE"
-		}).then(function() {
-			// Confirm & load recipes list
-			$("body").load(`/api`);
-		});
-	});
-
-	// Add a new recipe
+$(document).ready(function() {
+	// add-recipe button callback
 	$("#add-recipe").on("click", function(event) {
 		// prevent submit action from triggering prematurely
 		event.preventDefault();
@@ -44,9 +29,9 @@ $(function() {
 			// Show all recipes for user confirmation
 			$("body").load("/api");
 		});
-	});
+	}); // Create
 
-	// Update a recipe
+	// update-recipe button callback
 	$("#update-recipe").on("click", function(event) {
 		event.preventDefault();
 
@@ -69,7 +54,6 @@ $(function() {
 				.val()
 				.trim()
 		};
-
 		$.ajax("/api/recipes/" + id, {
 			type: "PUT",
 			data: updatedRecipe
@@ -77,5 +61,20 @@ $(function() {
 			// Display the recipe for user confirmation
 			$("body").load(`/api/${id}`);
 		});
-	});
+	}); // Update
+
+	// delete-recipe button callback
+	$(".delrecipe").on("click", function(event) {
+		// prevent submit action from triggering prematurely
+		event.preventDefault();
+
+		const id = $(this).data("id");
+
+		$.ajax("/api/recipes/" + id, {
+			type: "DELETE"
+		}).then(function() {
+			// Confirm & load recipes list
+			$("body").load(`/api`);
+		});
+	}); // Delete
 });
