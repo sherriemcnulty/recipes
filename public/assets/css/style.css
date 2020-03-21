@@ -1,7 +1,7 @@
 body {
 	background-color: rgb(245, 245, 235);
 	background-image: url("https://foodrevolution.org/wp-content/uploads/2018/04/blog-featured-diabetes-20180406-1330.jpg");
-	/* background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 

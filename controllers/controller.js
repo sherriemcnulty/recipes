@@ -109,7 +109,7 @@ router.get("/api/json", function(req, res) {
 
 // Page not found
 router.get("*", function(req, res) {
-	handleError(req, res, 404);
+	res.render("error404");
 });
 
 module.exports = router;
