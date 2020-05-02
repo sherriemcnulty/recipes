@@ -1,17 +1,17 @@
 # Recipes, Version 1.0
 
 - [Live Demo](https://recipes-srm.herokuapp.com/)
-- [Code](https://github.com/sherriemcnulty/recipes)
+- [Code](https://github.com/srm-code/recipes)
 
 ## Requirements
 
-- [Functional Requirements](https://sherriemcnulty.github.io/recipes/public/assets/documents/Requirements.PDF)
-- [Home Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_index.pdf)
-- [New Recipe Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_create.pdf)
-- [Edit Recipe Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_update.pdf)
-- [View All Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
-- [View One Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
-- [Error Page - Wireframe](https://sherriemcnulty.github.io/recipes/public/assets/documents/wireframe_error.pdf)
+- [Functional Requirements](https://srm-code.github.io/recipes/public/assets/documents/Requirements.PDF)
+- [Home Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_index.pdf)
+- [New Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_create.pdf)
+- [Edit Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_update.pdf)
+- [View All Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
+- [View One Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
+- [Error Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_error.pdf)
 
 ## Introduction
 
@@ -46,15 +46,18 @@ Add the following:
 
 ## Author(s)
 
-- [Sherrie McNulty](https://github.com/sherriemcnulty)
+- [Sherrie McNulty](https://github.com/srm-code)
+
   - Version 1.0: API, Database, Deployment
   - Version 2.0: UI/UX Re-design, Implementation, Deployment
-  
+
 - [Julian May](https://github.com/julianmay9)
+
   - Version 1.0, UI,/UX, Client-side API Integration, 3rd Party API, Deployment
-  
+
 - [Ashley Sweatt](https://github.com/aswea002)
+
   - Version 1.0: UI/UX, Database, Presentation Slideshow
-  
+
 - [Lenny Roper](https://github.com/LennyRoper)
   - Version 1.0: Investigate Symantic, Oral Demo
