@@ -1,17 +1,17 @@
 # Recipes, Version 1.0
 
-- [Live Demo](https://recipes-srm.herokuapp.com/)
-- [Code](https://github.com/srm-code/recipes)
+- [Live Demo](https://recipes-srm.herokuapp.com/){:target="\_blank"}
+- [Code](https://github.com/srm-code/recipes){:target="\_blank"}
 
 ## Requirements
 
-- [Functional Requirements](https://srm-code.github.io/recipes/public/assets/documents/Requirements.PDF)
-- [Home Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_index.pdf)
-- [New Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_create.pdf)
-- [Edit Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_update.pdf)
-- [View All Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
-- [View One Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
-- [Error Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_error.pdf)
+- [Functional Requirements](https://srm-code.github.io/recipes/public/assets/documents/Requirements.PDF){:target="\_blank"}
+- [Home Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_index.pdf){:target="\_blank"}
+- [New Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_create.pdf){:target="\_blank"}
+- [Edit Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_update.pdf){:target="\_blank"}
+- [View All Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-all.pdf){:target="\_blank"}
+- [View One Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-one.pdf){:target="\_blank"}
+- [Error Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_error.pdf){:target="\_blank"}
 
 ## Introduction
 
@@ -46,18 +46,18 @@ Add the following:
 
 ## Author(s)
 
-- [Sherrie McNulty](https://github.com/srm-code)
+- [Sherrie McNulty](https://github.com/srm-code){:target="\_blank"}
 
   - Version 1.0: API, Database, Deployment
   - Version 2.0: UI/UX Re-design, Implementation, Deployment
 
-- [Julian May](https://github.com/julianmay9)
+- [Julian May](https://github.com/julianmay9){:target="\_blank"}
 
   - Version 1.0, UI,/UX, Client-side API Integration, 3rd Party API, Deployment
 
-- [Ashley Sweatt](https://github.com/aswea002)
+- [Ashley Sweatt](https://github.com/aswea002){:target="\_blank"}
 
   - Version 1.0: UI/UX, Database, Presentation Slideshow
 
-- [Lenny Roper](https://github.com/LennyRoper)
+- [Lenny Roper](https://github.com/LennyRoper){:target="\_blank"}
   - Version 1.0: Investigate Symantic, Oral Demo
