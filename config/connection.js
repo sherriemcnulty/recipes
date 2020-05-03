@@ -11,11 +11,11 @@ if (process.env.JAWSDB_URL) {
 		port: 3306,
 		user: "root",
 		password: process.env.MYSQL_PASSWORD,
-		database: "recipes_db"
+		database: "recipes_db",
 	});
 }
 
-Connection.connect(function(err) {
+Connection.connect(function (err) {
 	if (err) throw err;
 	console.log("Connected to the database!");
 });
