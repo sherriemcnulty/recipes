@@ -23,8 +23,7 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
-
+// Give the server access to them.
 app.use(routes);
 
 // Start the server

@@ -1,56 +1,54 @@
 const express = require("express");
 const model = require("../models/model");
-const handleError = require("../lib/handleError");
-
 const router = express.Router();
 
 // Render index.handlebars
-router.get("/", function(req, res) {
+router.get("/", function (req, res) {
 	res.render("index");
 });
 
 // Render create.handlebars
-router.get("/api/create", function(req, res) {
+router.get("/api/create", function (req, res) {
 	res.render("create");
 });
 
 // Render populated view-all.handlebars
-router.get("/api", function(req, res) {
-	model.all(function(data) {
+router.get("/api", function (req, res) {
+	model.all(function (data) {
 		let hbsObject = {
-			recipes: data
+			recipes: data,
 		};
 		res.render("view-all", hbsObject);
 	});
 });
 
 // Render populated view-one.handlebars
-router.get("/api/:id", function(req, res) {
+router.get("/api/:id", function (req, res) {
 	let condition = "id = " + req.params.id;
 	let id = req.params.id;
 
-	model.getWhere(condition, function(data) {
+	model.getWhere(condition, function (data) {
 		let hbsObject = {
-			recipes: data
+			recipes: data,
 		};
 		res.render("view-one", hbsObject);
 	});
 });
 
 // Render populated update.handlebars
-router.get("/api/recipes/:id", function(req, res) {
+router.get("/api/recipes/:id", function (req, res) {
 	let condition = "id = " + req.params.id;
 
-	model.getWhere(condition, function(data) {
+	model.getWhere(condition, function (data) {
 		let hbsObject = {
-			recipes: data[0]
+			recipes: data[0],
 		};
 		res.render("update", hbsObject);
 	});
 });
 
 // Insert a new recipe & return the id
-router.post("/api/recipes", function(req, res) {
+router.post("/api/recipes", function (req, res) {
 	model.create(
 		["title, prep_time, ingredients, directions, servings"],
 		[
@@ -58,22 +56,22 @@ router.post("/api/recipes", function(req, res) {
 			req.body.prep_time,
 			req.body.ingredients,
 			req.body.directions,
-			req.body.servings
+			req.body.servings,
 		],
-		function(result) {
+		function (result) {
 			// Send back the ID of the new recipe
 			res.json({
-				id: result.insertId
+				id: result.insertId,
 			});
 		}
 	);
 });
 
 // Delete a recipe
-router.delete("/api/recipes/:id", function(req, res) {
+router.delete("/api/recipes/:id", function (req, res) {
 	var condition = "id = " + req.params.id;
 
-	model.delete(condition, function(result) {
+	model.delete(condition, function (result) {
 		if (result.affectedRows == 0) {
 			// If no rows changed -> id must not exist
 			return res.status(400).end();
@@ -84,10 +82,10 @@ router.delete("/api/recipes/:id", function(req, res) {
 });
 
 // Update a recipe
-router.put("/api/recipes/:id", function(req, res) {
+router.put("/api/recipes/:id", function (req, res) {
 	let condition = "id = " + req.params.id;
 
-	model.update(req.body, condition, function(result) {
+	model.update(req.body, condition, function (result) {
 		if (result.changedRows == 0) {
 			// If no rows changed -> id must not exist
 			res.render("error400");
@@ -98,17 +96,17 @@ router.put("/api/recipes/:id", function(req, res) {
 });
 
 // Send all recipes to the client as JSON
-router.get("/api/json", function(req, res) {
-	model.all(function(data) {
+router.get("/api/json", function (req, res) {
+	model.all(function (data) {
 		let hbsObject = {
-			recipes: data
+			recipes: data,
 		};
 		res.json(hbsObject);
 	});
 });
 
 // Page not found
-router.get("*", function(req, res) {
+router.get("*", function (req, res) {
 	res.render("error404");
 });
 
