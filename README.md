@@ -15,10 +15,9 @@ This software allows users to store recipes in a database and access them online
 
 ## Plans for future development
 
-- Login authentication
-- Search functionality
-- User accounts
-- Recipe ownership
+- Login
+- Limited access based on ownership
+- Search
 
 ## Author(s)
 
