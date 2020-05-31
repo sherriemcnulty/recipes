@@ -34,10 +34,10 @@ function objToSql(obj) {
 // (3) return result
 let Orm = {
 	// get all recipes
-	all: function(tableInput, cb) {
+	all: function (tableInput, cb) {
 		let queryString = `SELECT * FROM ${tableInput};`;
 
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, function (err, result) {
 			if (err) {
 				throw err;
 			}
@@ -46,10 +46,10 @@ let Orm = {
 	},
 
 	// get one recipe
-	getWhere: function(tableInput, condition, cb) {
+	getWhere: function (tableInput, condition, cb) {
 		let queryString = `SELECT * FROM ${tableInput} WHERE ${condition};`;
 
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, function (err, result) {
 			if (err) {
 				throw err;
 			}
@@ -58,12 +58,12 @@ let Orm = {
 	},
 
 	// insert a recipe
-	create: function(table, cols, vals, cb) {
+	create: function (table, cols, vals, cb) {
 		let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(
 			vals.length
 		)})  `;
 
-		connection.query(queryString, vals, function(err, result) {
+		connection.query(queryString, vals, function (err, result) {
 			if (err) {
 				throw err;
 			}
@@ -72,12 +72,12 @@ let Orm = {
 	},
 
 	// update a recipe
-	update: function(table, objColVals, condition, cb) {
+	update: function (table, objColVals, condition, cb) {
 		let queryString = `UPDATE ${table} SET ${objToSql(
 			objColVals
 		)} WHERE ${condition} `;
 
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, function (err, result) {
 			if (err) {
 				throw err;
 			}
@@ -86,16 +86,16 @@ let Orm = {
 	},
 
 	// delete a recipe
-	delete: function(table, condition, cb) {
+	delete: function (table, condition, cb) {
 		let queryString = `DELETE FROM ${table} WHERE ${condition}`;
 
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, function (err, result) {
 			if (err) {
 				throw err;
 			}
 			cb(result);
 		});
-	}
+	},
 };
 
 module.exports = Orm;

@@ -3,6 +3,7 @@ body {
 	background-image: url("https://foodrevolution.org/wp-content/uploads/2018/04/blog-featured-diabetes-20180406-1330.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-family: "Architects Daughter", cursive;
 }
 
 #brand-img {
@@ -18,9 +19,8 @@ body {
 	width: 5em;
 }
 
-.recipe {
-	font-size: larger;
-	font-family: "Satisfy", cursive;
+.no-wrap {
+	white-space: pre-line;
 }
 
 .w-small-number {

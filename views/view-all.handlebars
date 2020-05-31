@@ -1,19 +1,20 @@
-{{> navbar-view-all }}
+{{> navbar-all }}
 
 <div class="container">
-    <div class="jumbotron recipe text-center mx-auto w-100 bg-papyrus border border-warning rounded-0">
-
+    <div class="jumbotron mx-auto w-100 bg-papyrus border border-warning rounded-0">
+        <h2>Select A Recipe</h2>
+        <hr>
         {{#each recipes}}
         <div class="text-center my-2 mx-auto p-2 border border-warning rounded-0">
             <h2>{{this.title}}</h2>
             <div class="my-2">
-                <span class="label font-weight-bold">
+                <span class="label">
                     Prep Time:
                 </span>
-                <span class="font-weight-normal">
-                    {{this.prep_time}} minutes,
+                <span>
+                    {{this.prep_time}} minutes -
                 </span>
-                <span class="label font-weight-bold">
+                <span>
                     Servings:
                 </span>
                 <span class="font-weight-normal">
@@ -22,9 +23,10 @@
             </div>
             <button class="btn btn-warning btn-custom-size w-5em mr-1 rounded-0"
                 onclick="location.href='/api/{{this.id}}'">View</button>
-            <button class="btn btn-warning btn-custom-size mr-1 rounded-0"
+            <button class="btn btn-warning btn-custom-size w-5em mr-1 rounded-0"
                 onclick="location.href='/api/recipes/{{this.id}}'">Edit</button>
-            <button data-id="{{this.id}}" class="delrecipe btn btn-warning btn-custom-size rounded-0">Delete</button>
+            <button data-id="{{this.id}}"
+                class="delrecipe btn btn-warning btn-custom-size w-5em rounded-0">Delete</button>
         </div>
         {{/each}}
     </div>
