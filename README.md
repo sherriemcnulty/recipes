@@ -1,17 +1,7 @@
 # Recipes, Version 1.0
 
-- [Live Demo](https://recipes-srm.herokuapp.com/)
-- [Code](https://github.com/srm-code/recipes)
-
-## Requirements
-
-- [Functional Requirements](https://srm-code.github.io/recipes/public/assets/documents/Requirements.PDF)
-- [Home Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_index.pdf)
-- [New Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_create.pdf)
-- [Edit Recipe Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_update.pdf)
-- [View All Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-all.pdf)
-- [View One Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_view-one.pdf)
-- [Error Page - Wireframe](https://srm-code.github.io/recipes/public/assets/documents/wireframe_error.pdf)
+- [Live Demo](https:/sherriemcnulty.herokuapp.com/)
+- [Code](https://github.com/sherriemcnulty/recipes)
 
 ## Introduction
 
@@ -23,34 +13,16 @@ This software allows users to store recipes in a database and access them online
 - Edit a recipe
 - Delete a recipe
 
-## Out of Scope
+## Plans for future development
 
 - Login authentication
 - Search functionality
 - User accounts
 - Recipe ownership
 
-## Future Development
-
-### Version 2.0:
-
-- Add login authentication
-
-### Version 3.0:
-
-- Add Search
-
-### Version 4.0:
-
-Add the following:
-
-- User accounts
-- Login authentication
-- Recipe ownership (Limit recipe edit and delete to the owner)
-
 ## Author(s)
 
-- [Sherrie McNulty](https://github.com/srm-code)
+- [Sherrie McNulty](https://github.com/sherriemcnulty)
 
   - Version 1.0: API, Database, Deployment
   - Version 2.0: UI/UX Re-design, Implementation, Deployment
